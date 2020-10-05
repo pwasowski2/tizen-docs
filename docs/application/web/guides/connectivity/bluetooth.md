@@ -800,10 +800,9 @@ To register a GATT service in the local server:
    server.registerService(serviceInitData, successCallback, errorCallback);
    ```
    > **Note**
-   > The service will be registered in the server until one of the following
-   > happens:
-   > - service is unregistered with its `unregister()` method,
-   > - all services are unregistered with server's `unregisterAllServices()` method,
+   > The service will be unregistered from the server when:
+   > - service's `unregister()` method is called,
+   > - server's `unregisterAllServices()` method is called,
    > - application is reloaded,
    > - application is closed.
 
