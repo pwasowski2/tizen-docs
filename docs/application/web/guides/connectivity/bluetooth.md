@@ -755,6 +755,9 @@ To read and write a value of the Bluetooth descriptor:
 ### Accessing connection's ATT MTU
 <!-- END #11 -->
 
+<!-- TODO #12
+      - write about registerService()
+ -->
 ### Registering services
 To register a GATT service in the local server:
 
@@ -805,8 +808,12 @@ To register a GATT service in the local server:
    > - server's `unregisterAllServices()` method is called,
    > - application is reloaded,
    > - application is closed.
+<!-- END #12 -->
 
-
+<!-- TODO #13
+      - write about unregisterAllServices()
+      - write about BluetoothGATTServerService::unregister()
+ -->
 ### Unregistering services
 GATT services can be unregistered either one at a time or all at once.
 
@@ -854,7 +861,11 @@ To unregister all services from the local GATT server at once, call server's
    > After the calling `unregisterAllServices()`, the server is stopped.
    > If new services are then registered, server's `start()` method has to be
    > called to make them visible to clients.
+<!-- END #13 -->
 
+<!-- TODO #14
+      - write about notifyAboutValueChange()
+ -->
 ### Sending notifications about characteristic's value changes to the clients
 GATT clients connected to the server running on the local device can register for updates of its characteristics' values.
 The server can send two types of such updates - _notifications_ and _indications_.
@@ -956,6 +967,7 @@ To update clients on characteristic's value change after registering the service
                                          notificationCallback, errorCallback);
    ```
 The notification is sent and `notificationCallback`'s members will be called soon.
+<!-- END #14 -->
 
 <!-- TODO #15
       - write about setReadValueRequestCallback() for characteristic
