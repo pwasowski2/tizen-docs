@@ -837,7 +837,7 @@ To unregister a single service from the local GATT server:
    > called to make them visible to clients.
 
 To unregister all services from the local GATT server at once, call server's
-`unregisterAllServicesMethod()`:
+`unregisterAllServices()` method:
 
    ```
    function successCallback() {
